@@ -237,7 +237,7 @@ const ViewDataHotel = () => {
         setDistrictOptions(district_list);
       }
       const divisionCode = await getdistrictCode();
-
+      console.log("divisionCode", divisionCode, districtListApi)
       if (divisionCode) {
         setFilterData({
           ...filterData, district: {
@@ -572,7 +572,7 @@ const ViewDataHotel = () => {
     //   ulb?.id,
     //   1
     // );
-    if (filterData?.district && filterData?.tehsil && filterData?.patwar)
+    // if (filterData?.district && filterData?.tehsil && filterData?.patwar)
       dispatch(onHotelList(setLoader, 0, 20, filterData));
 
     // dispatch(onHotelList(setLoader,queryParams));
